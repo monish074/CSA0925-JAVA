@@ -1,0 +1,38 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+class ProductGrocery {
+    String productName;
+    double price;
+    int quantity;
+    ProductGrocery(String productName, double price, int quantity){
+        this.productName = productName;
+        this.price = price;
+        this.quantity = quantity;
+    }
+    double getTotalPrice() {
+        return price*quantity;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<ProductGrocery> p = new ArrayList<>();
+        list.add(new ProductGrocery("Mobile", 100000, 7));
+        list.add(new ProductGrocery("Laptop", 200000, 8));
+        list.add(new ProductGrocery("watch", 500, 23));
+        double grandTotal = 0;
+        System.out.println("Product Details");
+        System.out.println("---");
+        for(Product p1 : p)
+        {
+            System.out.println("ProductName : " + p1.productName);
+            System.out.println("Price        : " + p1.price);
+            System.out.println("Quantity     : " + p1.quantity);
+            System.out.println("Total Cost   : " + p1.getTotalPrice());
+            System.out.println();
+
+            grandTotal += p.getTotalPrice();
+        }
+
+        System.out.println("Grand Total = " + grandTotal);
+    }
+}
